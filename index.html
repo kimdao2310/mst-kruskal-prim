@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>MST – Kruskal & Prim 65130390</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+
+    <!-- HEADER -->
+    <header class="top-bar">
+    <div class="header-content">
+        <img src="images/logo.jpg" alt="Logo trường" class="school-logo">
+
+        <div class="header-text">
+            <h1>MINIMUM SPANNING TREE (MST)</h1>
+            <p>Kruskal & Prim – Thuật Toán Tìm Cây Khung Nhỏ Nhất</p>
+        </div>
+    </div>
+</header>
+
+
+    <!-- CONTROL BUTTONS -->
+    <section class="controls">
+        <button class="btn btn-gray" onclick="resetAll()">Làm mới</button>
+        <button class="btn btn-yellow" onclick="generateGraph()">Sinh đồ thị</button>
+        <button class="btn btn-red" onclick="startKruskal()">Kruskal</button>
+        <button class="btn btn-green" onclick="startPrim()">Prim</button>
+    </section>
+
+    <!-- INPUT EDGE -->
+    <section>
+        <h3>Nhập cạnh (u, v, w)</h3>
+        <div class="edge-input">
+            <input id="uInput" type="number" placeholder="u">
+            <input id="vInput" type="number" placeholder="v">
+            <input id="wInput" type="number" placeholder="w">
+            <button class="btn btn-yellow" onclick="addEdge()">Thêm</button>
+        </div>
+        <ul id="edgeList"></ul>
+    </section>
+
+    <!-- CANVAS -->
+    <section>
+        <canvas id="graphCanvas" width="900" height="450"></canvas>
+    </section>
+
+    <!-- LEGEND -->
+    <section>
+        <h3>Chú giải màu sắc</h3>
+        <ul style="list-style:none">
+            <li>
+                <span style="color:green;font-weight:bold">■</span>
+                Cạnh được chọn vào MST
+            </li>
+            <li>
+                <span style="color:red;font-weight:bold">■</span>
+                Cạnh bị loại (tạo chu trình)
+            </li>
+            <li>
+                <span style="color:#999;font-weight:bold">■</span>
+                Cạnh chưa xét
+            </li>
+        </ul>
+    </section>
+
+    <!-- LOG -->
+    <section>
+        <h3>Log thực hiện</h3>
+        <div id="log"></div>
+    </section>
+
+    <!-- COMPARISON TABLE -->
+    <section>
+        <h3>So sánh</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thuật toán</th>
+                    <th>Tổng trọng số</th>
+                    <th>Số cạnh xét</th>
+                    <th>Thời gian (ms)</th>
+                </tr>
+            </thead>
+            <tbody id="stats"></tbody>
+        </table>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="generator.js"></script> <!-- Sinh đồ thị liên thông -->
+    <script src="draw.js"></script>       <!-- Vẽ đồ thị -->
+    <script src="graph.js"></script>      <!-- Quản lý đồ thị + kéo node -->
+    <script src="unionfind.js"></script>
+    <script src="kruskal.js"></script>
+    <script src="prim.js"></script>
+    <script src="app.js"></script>        <!-- Điều phối + log + step -->
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+body {
+    font-family: "Segoe UI", Arial;
+    margin: 0;
+    background: #f4f6f9;
+}
+
+.top-bar {
+    background: #5da4ec;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.controls, section {
+    padding: 10px;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid #999;
+    background: white;
+    
+}
+
+.btn {
+    padding: 8px 14px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-red { background: #e74c3c; color: white; }
+.btn-green { background: #2ecc71; color: white; }
+.btn-yellow { background: #f1c40f; }
+.btn-gray { background: #95a5a6; color: white; }
+.btn-blue { background: #3498db; color: white; }
+.btn-dark { background: #34495e; color: white; }
+
+#log {
+    height: 260px;            
+    overflow-y: auto;
+    background: #fdfefe;
+    border: 2px solid #267ed7;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+    border-radius: 8px;
+    width: 88%; 
+    margin: auto;
+}
+#log b {
+    color: #2c3e50;
+}
+
+#log br {
+    margin-bottom: 6px;
+}
+
+
+table {
+    width: 88%;
+    margin: auto;
+    
+}
+
+table, th, td {
+    border: 1px solid #aaa;
+}
+section h3 {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    font-size: 16px;
+}
+
+th {
+    background: #3498db;
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #bbb;
+}
+
+
+tbody tr:nth-child(even) {
+    background: #f2f6f9;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.school-logo {
+    position: absolute;
+    left: 90px;
+    height: 120px;
+}
+
+
+.top-bar {
+    padding: 30px 15px;
+}
+
+
+.header-text {
+    text-align: center;
+}
